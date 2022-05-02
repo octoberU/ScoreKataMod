@@ -1,0 +1,15 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreKataMod", "ScoreKataMod.csproj", "{E490500C-41A5-4C54-B0F3-8EBC46BFED7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E490500C-41A5-4C54-B0F3-8EBC46BFED7B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E490500C-41A5-4C54-B0F3-8EBC46BFED7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E490500C-41A5-4C54-B0F3-8EBC46BFED7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
