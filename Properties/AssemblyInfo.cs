@@ -22,4 +22,4 @@ using MelonLoader;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: MelonInfo(type: typeof(ScoreKata.LeaderboardMod), "Score Kata Leaderboard", "1.0", "octo")]
+[assembly: MelonInfo(type: typeof(ScoreKata.LeaderboardMod), "Score Kata Leaderboard", "1.1", "octo")]
