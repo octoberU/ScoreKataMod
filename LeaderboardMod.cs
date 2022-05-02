@@ -19,14 +19,17 @@ namespace ScoreKata
 
         [HarmonyPatch(typeof(LeaderboardDisplay), "UpdateScores")]
         [HarmonyPrefix]
-        public static bool UpdateScores(LeaderboardDisplay __instance)
+        public static void UpdateScores(LeaderboardDisplay __instance)
         {
+            if (!__instance.totalLeaderboards)
+                return;
+            
             leaderboardDisplay = __instance;
             
             if(scoreKataTabButton == null) 
                 CreateButtons();
-            
-            return true;
+
+            CleanUpPreviouslySetData(__instance);
         }
         
         [HarmonyPatch(typeof(LeaderboardDisplay), "ViewTop")]
@@ -36,6 +39,9 @@ namespace ScoreKata
         [HarmonyPostfix]
         public static void RevertTitle(LeaderboardDisplay __instance)
         {
+            if (!__instance.totalLeaderboards)
+                return;
+            
             __instance.transform.parent.Find("Title").GetComponent<TMP_Text>()?.SetText("Total Leaderboard");
             CleanUpPreviouslySetData(__instance);
         }
